@@ -1,0 +1,44 @@
+name: camera_detection
+description: "A new Flutter project."
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.5.3 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  image_picker: ^1.1.2
+  path_provider: ^2.1.5
+  tflite_v2: ^1.0.0
+  image: ^4.3.0
+  firebase_core: ^3.8.0
+  cloud_firestore: ^5.5.0
+  firebase_storage: ^12.3.6
+  uuid: ^4.5.1
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  build_runner: ^2.4.13
+  hive_generator: ^2.0.1
+  bloc: ^8.1.4
+  flutter_bloc: ^8.1.6
+  camera: ^0.11.0+2
+  vector_math: ^2.1.4
+  flutter_vision: ^1.1.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/models/yolov8.tflite
+    - assets/models/labels.txt
+    - assets/models/ssd_mobilenet.tflite
+    - assets/models/ssd_mobilenet.txt
+
+
