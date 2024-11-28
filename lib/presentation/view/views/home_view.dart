@@ -2,8 +2,6 @@ import 'package:camera_detection/presentation/view/views/real_time_detection_vie
 import 'package:camera_detection/presentation/view/views/saved_images_view.dart';
 import 'package:flutter/material.dart';
 
-
-
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();

@@ -124,4 +124,13 @@ class CameraCubit extends Cubit<CameraState> {
     Tflite.close();
     return super.close();
   }
+
+  void disposeCamera() {
+    cameraController?.dispose();
+    cameraController = null;
+    _isCameraInitialized = false;
+    Tflite.close();
+    emit(CameraInitial());
+  }
+
 }

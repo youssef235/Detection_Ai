@@ -7,8 +7,28 @@ import '../widgets/objectDetectionPainter.dart';
 
 
 
-class RealTimeDetectionScreen extends StatelessWidget {
+class RealTimeDetectionScreen extends StatefulWidget {
   const RealTimeDetectionScreen({super.key});
+
+  @override
+  State<RealTimeDetectionScreen> createState() => _RealTimeDetectionScreenState();
+}
+
+class _RealTimeDetectionScreenState extends State<RealTimeDetectionScreen> {
+
+  CameraCubit? _cameraCubit;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _cameraCubit = context.read<CameraCubit>();
+  }
+
+  @override
+  void dispose() {
+    _cameraCubit?.disposeCamera();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
